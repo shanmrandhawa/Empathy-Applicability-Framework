@@ -65,6 +65,10 @@ To train the classifiers, load the corresponding train, eval, and
 test split CSVs from `data/classifier_experiments/` into the
 training folder and execute.
 
+To run the baselines, set `dim = 'EA'` or `dim = 'IA'` at the top
+of each script in `training/` and ensure the relevant CSVs
+from `data/classifier_experiments/` are accessible.
+
 ## Acknowledgments
 
 Patient queries are sourced from the HealthCareMagic and iCliniq
