@@ -54,6 +54,10 @@ pip install -r requirements.txt
 │   │   ├── IA_test.csv                           # Human-consensus test split (IA)
 │   │   ├── o1_zeroshot_EA_test.csv               # o1 zero-shot without EAF labeling of EA test set
 │   │   ├── o1_zeroshot_IA_test.csv               # o1 zero-shot without EAF labeling of IA test set
+│   │   ├── output_human_EA_test.csv                   # Transformer (Human Supervised) classifier predictions on EA test set
+│   │   ├── output_human_IA_test.csv                   # Transformer (Human Supervised) classifier predictions on IA test set
+│   │   ├── output_autonomous_EA_test.csv              # Transformer (Autonomous-GPT Supervised) classifier predictions on EA test set
+│   │   ├── output_autonomous_IA_test.csv              # Transformer (Autonomous-GPT Supervised) classifier predictions on IA test set
 │   │   └── unseen_EA_IA_train_autonomous.csv     # 8,000 GPT-only annotated queries (Autonomous Set)
 │   └── analysis/
 │       └── misalignment_analysis.csv             # Qualitative error analysis (Section 5.2)
@@ -68,6 +72,12 @@ training folder and execute.
 To run the baselines, set `dim = 'EA'` or `dim = 'IA'` at the top
 of each script in `training/` and ensure the relevant CSVs
 from `data/classifier_experiments/` are loaded.
+
+To run the baselines, set `dim = 'EA'` or `dim = 'IA'` at the top
+of each script in `training/` and ensure the relevant CSVs
+from `data/classifier_experiments/` are loaded. 
+For McNemar significance tests, `output_human_EA.csv` and `output_human_IA.csv` (Transformer Human Supervised predictions) must also be loaded.
+
 
 ## Acknowledgments
 
