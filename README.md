@@ -67,7 +67,7 @@ training folder and execute.
 
 To run the baselines, set `dim = 'EA'` or `dim = 'IA'` at the top
 of each script in `training/` and ensure the relevant CSVs
-from `data/classifier_experiments/` are accessible.
+from `data/classifier_experiments/` are loaded.
 
 ## Acknowledgments
 
