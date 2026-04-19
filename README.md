@@ -42,8 +42,8 @@ pip install -r requirements.txt
 │       ├── traditional_baselines.py              # TF-IDF + Logistic Regression / LinearSVC
 │       └── heuristics_o1_zeroshot_baselines.py   # Random / Always-Applicable / Always-Not / o1 evaluation
 ├── data/
-│   ├── annotated_set/
-│   │   ├── Humans_annotations_1300.csv           # 1,300 queries dual-annotated by two human annotators
+│   ├── annotated_set/                            # EAF benchmark dataset
+│   │   ├── Humans_annotations_1300.csv           # 1,300 queries annotated by two human annotators
 │   │   └── GPT_annotations_1300.csv              # GPT-4o annotations (majority-voted, 5 passes)
 │   ├── classifier_experiments/
 │   │   ├── EA_train.csv                          # Human-consensus training split (EA)
