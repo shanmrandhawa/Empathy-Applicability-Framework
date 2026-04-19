@@ -43,8 +43,8 @@ pip install -r requirements.txt
 │       └── heuristics_o1_zeroshot_baselines.py   # Random / Always-Applicable / Always-Not / o1 evaluation
 ├── data/
 │   ├── annotated_set/                            # EAF benchmark dataset
-│   │   ├── Humans_annotations_1300.csv           # 1,300 queries annotated by two human annotators
-│   │   └── GPT_annotations_1300.csv              # GPT-4o annotations (majority-voted, 5 passes)
+│   │   ├── Human_annotations_benchmark.csv           # 1,296 queries annotated by two human annotators
+│   │   └── GPT_annotations_benchmark.csv             # 1,296 queries annotated by GPT-4o (majority vote over 5 passes)
 │   ├── classifier_experiments/
 │   │   ├── EA_train.csv                          # Human-consensus training split (EA)
 │   │   ├── EA_eval.csv                           # Human-consensus eval split (EA)
