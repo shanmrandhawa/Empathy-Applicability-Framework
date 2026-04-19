@@ -33,10 +33,14 @@ pip install -r requirements.txt
 ├── scripts/
 │   ├── annotation/
 │   │   ├── emotional_reaction_annotation_GPT.py  # GPT annotation script for Emotional Reactions
-│   │   └── interpretation_annotation_GPT.py      # GPT annotation script for Interpretations
+│   │   ├── interpretation_annotation_GPT.py      # GPT annotation script for Interpretations
+│   │   ├── emotional_reaction_annotation_o1_without_framework.py   # o1 zero-shot annotation without EAF - EA
+│   │   └── interpretation_annotation_o1_without_framework.py       # o1 zero-shot annotation without EAF - IA
 │   └── training/
 │       ├── ea_classifier.py                      # RoBERTa classifier for Emotional Reactions
 │       └── ia_classifier.py                      # RoBERTa classifier for Interpretations
+│       ├── traditional_baselines.py              # TF-IDF + Logistic Regression / LinearSVC
+│       └── heuristics_o1_zeroshot_baselines.py   # Random / Always-Applicable / Always-Not / o1 evaluation
 ├── data/
 │   ├── annotated_set/
 │   │   ├── Humans_annotations_1300.csv           # 1,300 queries dual-annotated by two human annotators
@@ -48,6 +52,8 @@ pip install -r requirements.txt
 │   │   ├── IA_train.csv                          # Human-consensus training split (IA)
 │   │   ├── IA_eval.csv                           # Human-consensus eval split (IA)
 │   │   ├── IA_test.csv                           # Human-consensus test split (IA)
+│   │   ├── o1_zeroshot_EA_test.csv               # o1 zero-shot without EAF labeling of EA test set
+│   │   ├── o1_zeroshot_IA_test.csv               # o1 zero-shot without EAF labeling of IA test set
 │   │   └── unseen_EA_IA_train_autonomous.csv     # 8,000 GPT-only annotated queries (Autonomous Set)
 │   └── analysis/
 │       └── misalignment_analysis.csv             # Qualitative error analysis (Section 5.2)
