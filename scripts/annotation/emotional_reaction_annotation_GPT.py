@@ -165,4 +165,3 @@ for start in range(0, len(df), chunk_size):
 # Save the final updated DataFrame
 df.to_csv("final_emotional_annotations.csv", index=False)
 print("All chunks processed and results saved.")
-
